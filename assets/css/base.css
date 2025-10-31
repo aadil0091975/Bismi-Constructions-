@@ -1,0 +1,85 @@
+/* base.css - shared variables & global styles */
+
+/* ---------- Root Colors ---------- */
+:root {
+  --primary: #8b3a3a; /* Brick Red */
+  --secondary: #2e2b29; /* Dark Brown */
+  --accent: #c8a27c; /* Beige */
+  --light: #f9f9f9;
+  --white: #fff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --radius: 12px;
+  --transition: all 0.35s ease;
+}
+
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+/* Page defaults */
+body{background:var(--light);color:var(--secondary);line-height:1.6}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;background:linear-gradient(90deg,var(--secondary),#1e1c1a);color:var(--white);position:sticky;top:0;z-index:1000;box-shadow:var(--shadow)}
+.logo-area{display:flex;align-items:center;gap:0.75rem}
+.logo{height:44px;width:auto;object-fit:contain}
+.logo-area h2{font-size:1.1rem;letter-spacing:1px}
+
+/* Nav */
+nav.nav{display:flex;gap:1.2rem;align-items:center}
+nav.nav a{color:var(--white);text-decoration:none;padding:0.45rem 0.25rem;font-weight:600;transition:var(--transition)}
+nav.nav a.active,nav.nav a:hover{color:var(--accent)}
+
+/* Menu toggle - hidden on desktop */
+.menu-toggle{display:none;background:none;border:0;padding:.25rem}
+.menu-toggle span{display:block;width:26px;height:3px;background:var(--white);margin:5px 0;border-radius:2px;transition:all .3s}
+
+/* Footer */
+footer{background:var(--secondary);color:var(--white);text-align:center;padding:1rem;font-size:0.95rem;margin-top:2rem}
+
+/* Fade-in utility */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* Responsive nav for mobile */
+@media (max-width:768px){
+  nav.nav{position:absolute;top:64px;left:0;right:0;background:var(--secondary);flex-direction:column;gap:0.6rem;padding:0.8rem 1rem;display:none}
+  nav.nav.show{display:flex}
+  .menu-toggle{display:block;position:relative;z-index:1100}
+  header{padding:0.85rem 1rem}
+}

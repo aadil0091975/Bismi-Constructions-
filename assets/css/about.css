@@ -1,0 +1,165 @@
+/* =========================================
+   BISMI Construction — About Page
+   ========================================= */
+@import url("base.css");
+
+/* Hero Section */
+.page-header {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.page-header p {
+  color: var(--accent);
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* About Intro */
+.about-intro {
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+.about-intro h2 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-intro p {
+  color: #333;
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* Mission & Vision */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 10%;
+}
+
+.about-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-choose {
+  text-align: center;
+  padding: 3rem 8%;
+  background: var(--light);
+}
+
+.why-choose h2 {
+  color: var(--primary);
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+.choose-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.choose-item:hover {
+  transform: translateY(-6px);
+  background: var(--accent);
+}
+
+.choose-item img {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.choose-item h4 {
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.choose-item p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .choose-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
