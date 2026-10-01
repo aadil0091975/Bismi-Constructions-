@@ -24,13 +24,11 @@ if (toggle && nav) {
 const box = document.getElementById("lightbox");
 if (box && typeof box.showModal === "function") {
   const img = box.querySelector("img");
-  const cap = box.querySelector("p");
   document.querySelectorAll(".shot button").forEach((btn) => {
     btn.addEventListener("click", () => {
       const thumb = btn.querySelector("img");
       img.src = thumb.currentSrc || thumb.src;
       img.alt = thumb.alt;
-      cap.textContent = btn.closest("figure").querySelector("figcaption").textContent.replace(/\s+/g, " ").trim();
       box.showModal();
     });
   });

@@ -126,11 +126,6 @@ p { margin: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-figure { position: relative; margin: 0; min-height: 320px; }
 .hero-figure img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero-figure figcaption {
-  position: absolute; left: 16px; bottom: 16px;
-  font: 500 var(--step--1)/1.3 var(--f-mono); letter-spacing: .06em; text-transform: uppercase;
-  background: rgba(31, 32, 26, .82); color: var(--on-ink); padding: 8px 12px;
-}
 .hero .callout { color: #e0754f; }
 
 /* Dimension line: |←—— label ——→| */
@@ -179,19 +174,6 @@ p { margin: 0; }
 .schedule .arrow { justify-self: end; color: var(--tile); transition: transform .2s; }
 .schedule a:hover h3 { color: var(--tile-deep); }
 .schedule a:hover .arrow { transform: translateX(4px); }
-
-/* Feature project */
-.feature { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(20px, 3vw, 40px); align-items: start; }
-.feature-main { margin: 0; display: grid; gap: 10px; }
-.feature-main img { aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
-.feature-side { display: grid; gap: 24px; min-width: 0; }
-.feature-side h3 { font-size: var(--step-2); }
-.feature-side p { color: var(--on-ink-soft); }
-.thumbs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.thumbs figure { margin: 0; display: grid; gap: 6px; }
-.thumbs img { aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
-.cap { font: 500 0.75rem/1.3 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
-.on-ink .cap { color: var(--on-ink-soft); }
 
 /* Process steps (a real sequence, so numbered) */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); counter-reset: step; }
@@ -249,15 +231,11 @@ p { margin: 0; }
 .shot button { padding: 0; border: 0; background: var(--concrete); cursor: zoom-in; display: block; width: 100%; overflow: hidden; }
 .shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s ease; }
 .gallery.four .shot img { aspect-ratio: 3 / 4; }
-#fathima .shot img { aspect-ratio: 1 / 1; }
 .shot button:hover img { transform: scale(1.03); }
-.shot figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.shot figcaption strong { font-weight: 600; }
 
 .lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; }
 .lightbox::backdrop { background: rgba(20, 20, 16, .88); }
 .lightbox img { max-height: 82vh; width: auto; margin-inline: auto; }
-.lightbox p { color: var(--on-ink); font: 500 var(--step--1)/1.4 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; padding-top: 10px; text-align: center; }
 .lightbox .close { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; border: 0; background: rgba(31,32,26,.8); color: var(--on-ink); font-size: 24px; cursor: pointer; }
 
 /* ---------- Contact ---------- */
@@ -340,7 +318,7 @@ p { margin: 0; }
   .hero-grid { grid-template-columns: 1fr; min-height: 0; }
   .hero-figure { min-height: 0; aspect-ratio: 4 / 3; order: -1; margin-inline: calc(var(--gutter) * -1); }
   .hero-copy { padding-block: 36px 48px; }
-  .feature, .two-col, .contact-grid, .cta-band .wrap { grid-template-columns: 1fr; }
+  .two-col, .contact-grid, .cta-band .wrap { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery.five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery.five figure:nth-child(n) { grid-column: auto; }
