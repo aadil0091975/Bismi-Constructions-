@@ -36,23 +36,29 @@
   }
   </script>
 </head>
-<body>
+<body id="top">
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="BISMI Construction home">
+      <a class="brand" href="#top" aria-label="BISMI Construction, back to top">
         <img src="assets/images/logo-color.png" alt="BISMI Building Construction and Contract Works, Interior Design" width="364" height="144">
       </a>
       <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-extra">
+          <a class="btn btn-wa" href="https://wa.me/919037641141?text=Hi%20BISMI%20Construction%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/images/icons.svg#wa"/></svg>Chat on WhatsApp</a>
+          <a class="btn btn-line" href="tel:+919037641141"><svg aria-hidden="true"><use href="assets/images/icons.svg#phone"/></svg>+91 90376 41141</a>
+          <p>Civil Station, Alappuzha, Kerala</p>
+        </div>
       </nav>
       <a class="btn btn-tile header-call" href="tel:+919037641141"><svg aria-hidden="true"><use href="assets/images/icons.svg#phone"/></svg>+91 90376 41141</a>
-      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg aria-hidden="true"><use href="assets/images/icons.svg#menu"/></svg></button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span></button>
     </div>
   </header>
 
@@ -65,7 +71,7 @@
           <p class="hero-lede rise d2">Building construction, contract works and interior design for homes and commercial spaces across Alappuzha.</p>
           <div class="hero-actions rise d3">
             <a class="btn btn-wa" href="https://wa.me/919037641141?text=Hi%20BISMI%20Construction%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/images/icons.svg#wa"/></svg>Chat on WhatsApp</a>
-            <a class="btn btn-line" href="projects.html">See our projects</a>
+            <a class="btn btn-line" href="#projects">See our projects</a>
           </div>
           <span class="dim rise d3">Plan · Design · Build · Handover</span>
         </div>
@@ -75,23 +81,48 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="services">
       <div class="wrap">
-        <div class="section-head split">
-          <div>
-            <span class="callout">What we do</span>
-            <h2>Six services, one contractor</h2>
-          </div>
-          <a class="btn btn-line" href="services.html">All services</a>
+        <div class="section-head">
+          <span class="callout">What we do</span>
+          <h2>Six services, one contractor</h2>
+          <p>Pick one service or hand us the whole project.</p>
         </div>
         <ul class="schedule">
-          <li><a href="services.html#residential"><span class="code">S-01</span><h3>Residential construction</h3><p>Modern villas to budget-friendly family homes.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-          <li><a href="services.html#commercial"><span class="code">S-02</span><h3>Commercial projects</h3><p>Offices, showrooms and retail buildings.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-          <li><a href="services.html#interiors"><span class="code">S-03</span><h3>Interior design</h3><p>Kitchens, living rooms and storage designed around how you live.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-          <li><a href="services.html#renovation"><span class="code">S-04</span><h3>Renovation &amp; remodelling</h3><p>Full renovations or small upgrades to existing buildings.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-          <li><a href="services.html#management"><span class="code">S-05</span><h3>Project management</h3><p>Materials, manpower and schedule handled by our engineers.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-          <li><a href="services.html#planning"><span class="code">S-06</span><h3>Consulting &amp; design planning</h3><p>Architectural consultation, 3D views and structural planning.</p><span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><div class="row"><span class="code">S-01</span><h3>Residential construction</h3><p>Homes built for durability, beauty and everyday practicality, from modern villas to budget-friendly family houses.</p></div></li>
+          <li><div class="row"><span class="code">S-02</span><h3>Commercial projects</h3><p>Offices, showrooms and retail buildings with efficient layouts, quality finishes and on-time completion.</p></div></li>
+          <li><div class="row"><span class="code">S-03</span><h3>Interior design</h3><p>Living rooms, kitchens, dining areas and storage, designed to suit your taste and the way your family lives.</p></div></li>
+          <li><div class="row"><span class="code">S-04</span><h3>Renovation &amp; remodelling</h3><p>New life for older buildings, from a full renovation to a single room.</p></div></li>
+          <li><div class="row"><span class="code">S-05</span><h3>Project management</h3><p>Our supervisors and engineers handle materials and manpower and keep your project on schedule and on budget.</p></div></li>
+          <li><div class="row"><span class="code">S-06</span><h3>Consulting &amp; design planning</h3><p>Architectural consultation, 3D views and structural planning before construction begins.</p></div></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section on-ink projects" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="callout">Our projects</span>
+          <h2>Homes and interiors we've designed</h2>
+          <p>Tap any photo to see it larger.</p>
+        </div>
+
+        <h3 class="gallery-title">Residences</h3>
+        <div class="gallery five">
+          <figure class="shot"><button type="button"><img src="assets/images/image1.jpg" alt="Two-storey contemporary home with cantilevered carport at dusk" width="1200" height="900" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image3.jpg" alt="Front view of a contemporary home with timber louvres and planters" width="1200" height="900" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image2.jpg" alt="Two-storey white home with stone cladding and wooden screen" width="1024" height="853" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image5.jpg" alt="Two-storey home with timber cladding and glass balcony at dusk" width="1280" height="1066" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image4.jpg" alt="Single-storey home with laterite brick cladding" width="1170" height="934" loading="lazy"></button></figure>
+        </div>
+
+        <h3 class="gallery-title">Interiors</h3>
+        <div class="gallery four">
+          <figure class="shot"><button type="button"><img src="assets/images/image6.jpg" alt="Living room with wooden TV unit and grey sofa" width="955" height="1024" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image7.jpg" alt="Living and dining area with timber slat wall and staircase" width="955" height="1024" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image%209.jpg" alt="Modular kitchen with breakfast counter" width="960" height="1280" loading="lazy"></button></figure>
+          <figure class="shot"><button type="button"><img src="assets/images/image8.jpg" alt="Hall with open staircase and marble flooring" width="960" height="1280" loading="lazy"></button></figure>
+        </div>
       </div>
     </section>
 
@@ -112,11 +143,25 @@
       </div>
     </section>
 
-    <section class="section tinted">
+    <section class="section tinted" id="about">
       <div class="wrap">
-        <div class="section-head">
-          <span class="callout">Why BISMI</span>
-          <h2>Built to last, delivered on time</h2>
+        <div class="two-col">
+          <div class="prose">
+            <span class="callout">About us</span>
+            <h2 class="about-title">Building homes in Alappuzha with trust and care</h2>
+            <p class="lead">BISMI Construction is based at Civil Station, Alappuzha. We build residential and commercial projects and design interiors, combining practical engineering with careful craftsmanship.</p>
+            <p>Because design, construction and interiors sit with one contractor, decisions are made quickly and the finished building matches the plan you approved.</p>
+          </div>
+          <div class="statements">
+            <div class="statement">
+              <span class="callout">Mission</span>
+              <p>To deliver high-quality construction and interior solutions that exceed client expectations through professionalism, integrity and innovation.</p>
+            </div>
+            <div class="statement">
+              <span class="callout">Vision</span>
+              <p>To become Kerala's most trusted construction brand by providing modern, sustainable and affordable construction services while building long-lasting relationships with our clients.</p>
+            </div>
+          </div>
         </div>
         <div class="reasons">
           <div class="reason">
@@ -138,22 +183,30 @@
       </div>
     </section>
 
-    <section class="section on-ink cta-band">
-      <div class="wrap">
-        <div>
-          <span class="callout">Start a project</span>
+    <section class="section on-ink" id="contact">
+      <div class="wrap contact-wrap">
+        <div class="section-head">
+          <span class="callout">Contact</span>
           <h2>Have a plot or a plan? Let's talk it through.</h2>
-          <p>Tell us what you want to build or renovate. We'll come back with ideas, a rough budget and next steps.</p>
+          <p>Call or message us on WhatsApp. We'll come back with ideas, a rough budget and next steps.</p>
         </div>
-        <div class="cta-actions">
-          <a class="btn btn-tile" href="contact.html">Send an enquiry</a>
-          <div class="numbers">
-            <a href="tel:+919037641141">+91 90376 41141</a><br>
-            <a href="tel:+919995358552">+91 99953 58552</a>
-          </div>
+        <div class="contact-actions">
+          <a class="btn btn-wa" href="https://wa.me/919037641141?text=Hi%20BISMI%20Construction%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/images/icons.svg#wa"/></svg>Chat on WhatsApp</a>
+          <a class="btn btn-tile" href="tel:+919037641141"><svg aria-hidden="true"><use href="assets/images/icons.svg#phone"/></svg>Call now</a>
         </div>
+        <ul class="contact-list">
+          <li><span class="label">Phone</span><span class="value"><a href="tel:+919037641141">+91 90376 41141</a><a href="tel:+919995358552">+91 99953 58552</a></span></li>
+          <li><span class="label">WhatsApp</span><span class="value"><a href="https://wa.me/919037641141" target="_blank" rel="noopener">+91 90376 41141</a></span></li>
+          <li><span class="label">Email</span><span class="value"><a href="mailto:ameenshareef02@gmail.com">ameenshareef02@gmail.com</a></span></li>
+          <li><span class="label">Office</span><span class="value"><span>(20/849A), S.A. Cottage, Civil Station, Alappuzha, Kerala</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Civil+Station+Alappuzha+Kerala" target="_blank" rel="noopener">Open in Google Maps</a></span></li>
+        </ul>
       </div>
     </section>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Project photo">
+      <button class="close" type="button" aria-label="Close">×</button>
+      <img alt="">
+    </dialog>
   </main>
 
   <footer class="site-footer">
@@ -174,12 +227,12 @@
           <a href="mailto:ameenshareef02@gmail.com">ameenshareef02@gmail.com</a>
         </div>
         <div>
-          <span class="tb-label">Pages</span>
+          <span class="tb-label">Sections</span>
           <nav aria-label="Footer">
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </nav>
         </div>
       </div>

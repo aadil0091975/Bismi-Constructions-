@@ -1,20 +1,21 @@
-// BISMI Construction — shared site script
+// BISMI Construction — site script
 
-const WHATSAPP = "919037641141";
-
-// Mobile menu
+// Mobile menu: full-screen on phones; tapping a section link jumps there and closes it
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("site-nav");
 if (toggle && nav) {
+  const mq = window.matchMedia("(max-width: 860px)");
   const setOpen = (open) => {
     nav.dataset.open = String(open);
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.documentElement.classList.toggle("menu-locked", open && mq.matches);
   };
-  const mq = window.matchMedia("(max-width: 860px)");
   const sync = () => setOpen(!mq.matches);
   sync();
   mq.addEventListener("change", sync);
   toggle.addEventListener("click", () => setOpen(nav.dataset.open !== "true"));
+  nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { if (mq.matches) setOpen(false); }));
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mq.matches && nav.dataset.open === "true") { setOpen(false); toggle.focus(); }
   });
@@ -34,25 +35,6 @@ if (box && typeof box.showModal === "function") {
   });
   box.querySelector(".close").addEventListener("click", () => box.close());
   box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
-}
-
-// Enquiry form: there is no server on GitHub Pages, so it opens WhatsApp with the message filled in
-const form = document.getElementById("enquiry");
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const v = (id) => document.getElementById(id).value.trim();
-    const lines = [
-      "Hi BISMI Construction, I'd like to discuss a project.",
-      "",
-      `Name: ${v("f-name")}`,
-      `Phone: ${v("f-phone")}`,
-      `Work needed: ${v("f-type")}`,
-    ];
-    if (v("f-place")) lines.push(`Site location: ${v("f-place")}`);
-    if (v("f-msg")) lines.push(`Details: ${v("f-msg")}`);
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
-  });
 }
 
 // Footer year
